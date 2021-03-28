@@ -1,0 +1,4 @@
+.tmp.drivedownload
+./node_modules
+.gitattributes
+.gitignore

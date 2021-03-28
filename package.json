@@ -1,0 +1,46 @@
+{
+  "name": "harbormaster-core",
+  "version": "0.1.0",
+  "description": "Harbormaster API for programmatic access to Harbormaster to generate functional webapps, serverless or RESTful APIs. Choose from available community tech stacks and models, or use, and optinally contribute your own.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "code",
+    "generator",
+    "generate",
+    "generation",
+    "harbormaster"
+  ],
+  "author": "Harbormaster, Inc.",
+  "license": "ISC",
+  "dependencies": {
+    "@octokit/rest": "^16.8.1",
+    "aws-sdk": "^2.418.0",
+    "boilerplate-readme-template": "^1.0.1",
+    "chalk": "^2.4.2",
+    "clear": "^0.1.0",
+    "cli-table": "^0.3.1",
+    "clui": "^0.3.6",
+    "commander": "^2.19.0",
+    "config": "^3.0.1",
+    "configstore": "^4.0.0",
+    "figlet": "^1.2.1",
+    "inquirer": "^6.2.1",
+    "js-yaml": "^3.13.1",
+    "local": "^0.3.3",
+    "lodash": "^4.17.15",
+    "minimist": "^1.2.0",
+    "request": "^2.88.0",
+    "simple-git": "^1.107.0",
+    "touch": "^3.1.0",
+    "util": "^0.11.1"
+  },
+  "bin": {
+    "harbormaster": "./index.js"
+  }
+}
