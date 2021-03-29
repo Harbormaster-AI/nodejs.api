@@ -241,12 +241,14 @@ self = module.exports =  {
 		});
 	},
 
-	registerResource : (resourceFile, uniqueName, type, scope) => {	
+	registerResource : (resourceFile, uniqueName, type, cost, scope) => {	
 		return new Promise(function(resolve,reject) {
 			if ( resourceFile == null )
-				reject( status.error(null, "Invalid resource file provided." ));
+				reject( status.error(null, "Empty or invalid resource file provided." ));
+			else if ( cost==null || Number(cost) === Number.NaN )
+				reject( status.error(null, "Empty or invalid cost provided" ));
 			else {
-				resourceHandler.register(resourceFile, uniqueName, type, scope == null ? constants.PRIVATE : scope)
+				resourceHandler.register(resourceFile, uniqueName, type, cost, scope == null ? constants.PRIVATE : scope)
 					.then(function(result) {
 						resolve( result );
 				}).catch(err => reject(err));
