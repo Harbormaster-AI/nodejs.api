@@ -41,6 +41,6 @@
     "util": "^0.11.1"
   },
   "bin": {
-    "harbormaster": "./index.js"
+    "harbormaster-core": "./index.js"
   }
 }
