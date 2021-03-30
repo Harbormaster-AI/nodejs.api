@@ -1,0 +1,20 @@
+{
+  // module configs
+  "harbormaster": {
+    "serverConfig": {
+      "host": "http://harbormaster.ai/platform/",
+    },  
+	"awsS3Config": {
+    "region": "us-east-1",
+    "apiVersion": '2006-03-01',
+	"s3UsersDir": 'private/users/',
+    "publicRmTechStacksRootDir": 'public/realMethods/techstacks/',
+    "protocol": "https://", 
+    "s3ServerUrl": 's3.amazonaws.com/',
+    "bucket" : "goframework-cli-bucket", // secure bucket is goframeworksecurebucket
+    "accessKeyId": "YGWZ3745ZWX2WSTRAIKA",
+    "secretAccessKey": "V0KcwfMah6yV2QZh2L+KNg0/g/Bft7wSi4vqRoSA" 
+   }
+  }
+}
+
