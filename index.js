@@ -32,10 +32,11 @@ self = module.exports =  {
 					var config 			= require('config');
 					var serverConfig 	= config.get(constants.SERVER_CONFIG);
 					var host 			= serverConfig.host;
-					var endPoint 		= serverConfig.endpoint;
-					var port			= serverConfig.port;
+//					var endPoint 		= serverConfig.endpoint;
+//					var port			= serverConfig.port;
 					
-					hostUrl = host + ':' + port + endPoint;
+//					hostUrl = host + ':' + port + endPoint;
+					hostUrl = host;
 				}
 				
 				conf.set(constants.PLATFORM_URL, hostUrl);
