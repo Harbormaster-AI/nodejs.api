@@ -96,12 +96,12 @@ self = module.exports =  {
 		});
 	},
 	
-	registerModel : (yamlFile, scope, javaRootPackageName, primaryKeyPattern ) => {	
+	registerModel : (yamlFile, name, scope, javaRootPackageName, primaryKeyPattern ) => {	
 		return new Promise(function(resolve,reject) {
 			if ( yamlFile == null )
 				reject( status.error(null, "Invalid YAML file provided." ));
 			else {				
-				modelHandler.register(yamlFile, scope == null ? constants.PRIVATE : scope, javaRootPackageName, primaryKeyPattern )
+				modelHandler.register(yamlFile, name, scope == null ? constants.PRIVATE : scope, javaRootPackageName, primaryKeyPattern )
 					.then(function(result) {
 						resolve( result );
 				}).catch(err => reject(err));
@@ -297,18 +297,27 @@ self = module.exports =  {
 	
 
 	////////////////////////////////////////////////////
-	// App Generation Related Functions
+	// Project Related Functions
 	////////////////////////////////////////////////////
 	
-	generateApp : (yamlFilePath, gitFile, appOptionsFile, modelIdentifier) => {	
+	generateProject : (yamlFilePath, gitFile, appOptionsFile, modelIdentifier) => {	
 		return new Promise(function(resolve, reject) {
-			generateHandler.generateApp(yamlFilePath, gitFile, appOptionsFile, modelIdentifier)
+			generateHandler.generateProject(yamlFilePath, gitFile, appOptionsFile, modelIdentifier)
 				.then(function(result) {
 					resolve( result );
 				}).catch(err => reject(err));
 		});
 	},
-	
+
+	saveProject : (yamlFilePath, name) => {
+		return new Promise(function(resolve,reject) {
+			projectHandler.saveProject(yamlFilePath, name)
+				.then(function(result) {
+					resolve( result );
+				}).catch(err => reject(err));
+		});
+	},
+
 	
 	////////////////////////////////////////////////////
 	//Archive Related Functions
@@ -357,13 +366,5 @@ self = module.exports =  {
 		});
 	},
 
-	saveProject : (yamlFilePath) => {
-		return new Promise(function(resolve,reject) {
-			projectHandler.saveProject(yamlFilePath)
-				.then(function(result) {
-					resolve( result );
-				}).catch(err => reject(err));
-		});
-	},
 
 }
