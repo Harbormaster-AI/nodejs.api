@@ -1,6 +1,6 @@
 {
   "name": "harbormaster-api",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Harbormaster API for programmatic access to Harbormaster to generate functional webapps, serverless or RESTful APIs. Choose from available community tech stacks and models, or use, and optinally contribute your own.",
   "main": "index.js",
   "directories": {
