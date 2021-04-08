@@ -2,7 +2,7 @@
   // module configs
   "harbormaster": {
     "serverConfig": {
-      "host": "http://harbormaster.ai/platform/",
+      "host": "http://service.harbormaster.ai",
     },  
 	"awsS3Config": {
     "region": "us-east-1",
