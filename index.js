@@ -46,10 +46,11 @@ self = module.exports =  {
 			    		reject( status.error(err, constants.TOKEN_VALIDATION_ERROR ) );
 			    	}else {
 			    		if ( data != null && data.resultCode == constants.SUCCESS ) {
-			    			if (inputToken == JSON.parse(data.result).token) {
+// server returns redacted token value			    			if (inputToken == JSON.parse(data.result).token) {
+
 			    				user.storeToken(inputToken);	// authenticated
 			    				resolve( data );
-			    			}
+//			    			}
 			    		} 
 			    		else
 			    			reject( status.error("", constants.TOKEN_VALIDATION_ERROR ) ); 
