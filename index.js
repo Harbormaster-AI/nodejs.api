@@ -319,7 +319,35 @@ self = module.exports =  {
 		});
 	},
 
-	
+    listProject : (scope) => {
+        return new Promise(function(resolve,reject) {
+            projectHandler.listProject(scope)
+                .then(function(result) {
+                    resolve( result );
+                }).catch(err => reject(err));
+        });
+    },
+
+	promoteProject (project_id_or_name) {
+		return new Promise(function(resolve,reject) {
+			projectHandler.promoteProject(project_id_or_name)
+				.then(function(result) {
+					resolve( result );
+			}).catch(err => reject(err));
+		});
+
+	},
+
+	demoteProject (project_id_or_name) {
+		return new Promise(function(resolve,reject) {
+			projectHandler.demoteProject(project_id_or_name)
+				.then(function(result) {
+					resolve( result );
+			}).catch(err => reject(err));
+		});
+
+	},
+
 	////////////////////////////////////////////////////
 	//Archive Related Functions
 	////////////////////////////////////////////////////
