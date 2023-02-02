@@ -41,6 +41,14 @@
     "util": "^0.11.1"
   },
   "bin": {
-    "harbormaster-api": "./index.js"
-  }
+    "harbormaster-api": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Harbormaster-AI/nodejs.api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Harbormaster-AI/nodejs.api/issues"
+  },
+  "homepage": "https://github.com/Harbormaster-AI/nodejs.api#readme"
 }
